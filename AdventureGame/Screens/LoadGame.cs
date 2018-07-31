@@ -11,30 +11,16 @@ namespace AdventureGame.Screens
     {
         public LoadGame()
         {
-            AddOptions();
-            RunScreen();
+            AddDecisions();
+            Run();
         }
-        private void RunScreen()
+        private void Run()
         {
-            int input = 0;
-            Show();
-            input = InputController.HandleInput(this);
-            Navigate(input);
         }
-        private void AddOptions()
+        private void AddDecisions()
         {
             ValidOptions = new List<string>();
             ValidOptions.Add("1");
-        }
-        public override void Show()
-        {
-            Console.WriteLine("Load Game");
-            Console.WriteLine("1. Exit");
-        }
-        public override void Navigate(int input)
-        {
-            Console.Clear();
-            if (input == 1) Environment.Exit(0);
         }
     }
 }

@@ -9,12 +9,5 @@ namespace AdventureGame.Screens
     public abstract class Screen
     {
         public List<string> ValidOptions { get; set; }
-        public virtual void Show()
-        {
-
-        }
-        public virtual void Navigate(int input)
-        {
-        }
     }
 }

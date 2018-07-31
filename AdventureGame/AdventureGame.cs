@@ -16,19 +16,8 @@ namespace AdventureGame
         }
         private void Start()
         {
+            GameController.Init();
             ScreenController.Init();
-        }
-        private void NewGame()
-        {
-            Console.Clear();
-            Console.WriteLine("New Game");
-            Console.ReadLine();
-        }
-        private void LoadGame()
-        {
-            Console.Clear();
-            Console.WriteLine("Load Game");
-            Console.ReadLine();
         }
     }
 }

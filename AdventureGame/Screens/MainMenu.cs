@@ -9,33 +9,28 @@ namespace AdventureGame.Screens
 {
     public class MainMenu:Screen
     {
+        Decision mainMenu;
         public MainMenu()
         {
-            AddOptions();
-            RunScreen();
+            ScreenController.Clear();
+            AddDecisions();
+            Run();
         }
-        private void RunScreen()
+        private void Run()
         {
-            int input = 0;
-            Show();
-            input = InputController.HandleInput(this);
+            ScreenController.Write("Adventure Game");
+            ShowMenuOptions();
+        }
+        private void AddDecisions()
+        {
+            mainMenu = new Decision("What Would You Like To Do?", new List<string>() { "1. New Game", "2. Load Game", "3. Exit" });
+        }
+        private void ShowMenuOptions()
+        {
+            int input = mainMenu.Run();
             Navigate(input);
         }
-        private void AddOptions()
-        {
-            ValidOptions = new List<string>();
-            ValidOptions.Add("1");
-            ValidOptions.Add("2");
-            ValidOptions.Add("3");
-        }
-        public override void Show()
-        {
-            Console.WriteLine("Adventure Game");
-            Console.WriteLine("1. New Game");
-            Console.WriteLine("2. Load Game");
-            Console.WriteLine("3. Exit");
-        }
-        public override void Navigate(int input)
+        private void Navigate(int input)
         {
             Console.Clear();
             if (input == 1) ScreenController.currentScreen = new NewGame();

@@ -43,13 +43,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdventureGame.cs" />
+    <Compile Include="Classes\Character.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\Decision.cs" />
     <Compile Include="Screens\LoadGame.cs" />
     <Compile Include="Screens\MainMenu.cs" />
     <Compile Include="Screens\NewGame.cs" />
+    <Compile Include="Screens\Input.cs" />
     <Compile Include="Screens\Screen.cs" />
-    <Compile Include="Static\InputController.cs" />
+    <Compile Include="Static\GameController.cs" />
     <Compile Include="Static\ScreensController.cs" />
   </ItemGroup>
   <ItemGroup>
